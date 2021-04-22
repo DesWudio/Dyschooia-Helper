@@ -8,16 +8,16 @@
 
 至于eat_reason.py的功能，出于信息类专业对数据的敏(bian)感(tai)和对计算机随机数随机性的怀疑，我的朋友们对它的公平性提出了质疑。于是，我在eat_reason.py中进行了1,000,000次实验并使用matplotlib生成了柱状图展示实验结果，对程序的公平性做出了证明。
 
-![1](https://github.com/DesWudio/Dyschooia-Helper/blob/main/readme/img1.png)
+![2](https://github.com/DesWudio/Dyschooia-Helper/blob/main/readme/img1.png)
 
 # Dyschooia-Helper
 
 Have difficulty in choosing what‘s for dinner? Don't hesitate too much, this python program is here to help you.
 
-![1](https://github.com/DesWudio/Dyschooia-Helper/blob/main/readme/img0.png)
+![3](https://github.com/DesWudio/Dyschooia-Helper/blob/main/readme/img0.png)
 
 In eat.py, the optional range can be customized by modifying the contents of the list Arr. In addition, the form of eat.py is implemented by tkinter, make sure you have this lib.
 
-![1](https://github.com/DesWudio/Dyschooia-Helper/blob/main/readme/img1.png)
+![4](https://github.com/DesWudio/Dyschooia-Helper/blob/main/readme/img1.png)
 
 Since my friends didn't trust the results of this program, eat_reason.py was used to prove the results fairness by conducting 1,000,000 experiments to test the probability distribution of each option. Finally, the results are displayed using matplotlib to plot bar graphs.
