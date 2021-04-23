@@ -8,7 +8,7 @@ Arr = ['麻辣烫','麻辣拌','鸡公煲','渤海','打卤面','辣子鸡','羊
 sum = np.array([0,0,0,0,0,0,0,0,0]) # 用于存储结果
 
 # 实验部分
-times=100000 # 实验次数
+times=1000000 # 实验次数
 for i in range(times): # 循环次数
 	conclu = Arr[random.randint(0, len(Arr)-1)] # 得出随机结果
 	j = 0
