@@ -15,7 +15,7 @@ def b1():
     text = Arr[random.randint(0, len(Arr)-1)]  # 得出随机结果
     with open(f, "a") as file:
         file.write(str(time.asctime(time.localtime(time.time()
-                    ))) + " " + text + "\n")  # 写入txt格式
+                    ))) + " " + str(text) + "\n")  # 写入txt格式
     tk.messagebox.showinfo('今晚吃：', text)  # 弹窗显示结果
 
 # 定义窗口
