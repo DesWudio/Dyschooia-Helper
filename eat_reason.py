@@ -8,7 +8,7 @@ Arr = ['麻辣烫','麻辣拌','鸡公煲','渤海','打卤面','辣子鸡','羊
 sum = np.array([0,0,0,0,0,0,0,0,0]) # 用于存储结果
 
 # 实验部分
-times=1000000 # 实验次数
+times=100000 # 实验次数
 for i in range(times): # 循环次数
 	conclu = Arr[random.randint(0, len(Arr)-1)] # 得出随机结果
 	j = 0
@@ -32,15 +32,11 @@ plt.rcParams['font.sans-serif'] = ['SimHei']
 matplotlib.rcParams['font.sans-serif'] = ['SimHei']
 matplotlib.rcParams['axes.unicode_minus'] = False
 
-# 横坐标内容
-yy = ['麻辣烫','麻辣拌','鸡公煲','渤海饭店','打卤面','辣子鸡'\
-		,'羊汤','二小饭店','食堂']
-
 # 数据处理 将食堂值除以4以平衡结果
 sum[8] = sum[8]/4
 
 # 绘制结果统计柱状图
-plt.bar(yy, sum)
+plt.bar(Arr[0:9], sum)
 plt.title('吃啥程序的合理性验证')
 for x,y in enumerate(sum): # 绘制横坐标
 	plt.text(x, y+100, '%s'%y, ha='center')
@@ -53,6 +49,6 @@ for a in range(len(sum)):
 print(pcs)
 
 # 绘制差值柱状图
-plt.bar(yy, pcs)
+plt.bar(Arr[0:9], pcs)
 plt.title('差异值')
 plt.show()
