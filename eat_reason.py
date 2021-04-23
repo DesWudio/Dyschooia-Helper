@@ -8,9 +8,9 @@ Arr = ['麻辣烫','麻辣拌','鸡公煲','渤海','打卤面','辣子鸡','羊
 sum = np.array([0,0,0,0,0,0,0,0,0]) # 用于存储结果
 
 # 实验部分
-length = len(Arr)
-for i in range(100000): # 循环次数
-	conclu = Arr[random.randint(0, length-1)] # 得出随机结果
+times=100000 # 实验次数
+for i in range(times): # 循环次数
+	conclu = Arr[random.randint(0, len(Arr)-1)] # 得出随机结果
 	j = 0
 	for t in Arr: # 将结果存入sum数组
 		if(conclu == t):
@@ -37,13 +37,22 @@ yy = ['麻辣烫','麻辣拌','鸡公煲','渤海饭店','打卤面','辣子鸡'
 		,'羊汤','二小饭店','食堂']
 
 # 数据处理 将食堂值除以4以平衡结果
-sum1 = np.copy(sum)
-sum1[8] = sum1[8]/4
-xx = sum1
+sum[8] = sum[8]/4
 
-# 绘制柱状图
-plt.bar(yy, xx)
+# 绘制结果统计柱状图
+plt.bar(yy, sum)
 plt.title('吃啥程序的合理性验证')
-for x,y in enumerate(xx): # 绘制横坐标
+for x,y in enumerate(sum): # 绘制横坐标
 	plt.text(x, y+100, '%s'%y, ha='center')
+plt.show()
+
+# 计算结果与理论概率的差值
+pcs = np.array([0.,0.,0.,0.,0.,0.,0.,0.,0.])
+for a in range(len(sum)):
+	pcs[a] = sum[a]/times - 1/len(Arr)
+print(pcs)
+
+# 绘制差值柱状图
+plt.bar(yy, pcs)
+plt.title('差异值')
 plt.show()
