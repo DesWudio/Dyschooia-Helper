@@ -15,10 +15,10 @@
     <div id="main">
         <div id="title">今晚吃什么</div>
         <div id="maintitle">
-            <input id="结果" value="？"></input>
+            <input id="conclu" value="？" readonly="readonly"></input>
         </div>
         <div id="maintitle">
-            <button onclick="生成()">点我</button>
+            <button onclick="genearate()">点我</button>
         </div>
     </div>
 </body>
@@ -26,12 +26,14 @@
 </html>
 
 <script>
-    function 生成() {
-        var items = ['麻辣烫', '麻辣拌', '鸡公煲', '渤海', '打卤面', '辣子鸡', '羊汤', '二小', '食堂', '食堂', '食堂', '食堂']
+    function genearate() {
+        var items = ['麻辣烫', '麻辣拌', '鸡公煲', '渤海', '打卤面',
+            '辣子鸡', '羊汤', '二小', '食堂', '食堂', '食堂', '食堂'
+        ]
         var randomItem = items[Math.floor(Math.random() * items.length)];
         console.log(randomItem);
-        var input = document.getElementsByTagName("结果");
-        结果.value = randomItem;
+        var input = document.getElementsByTagName("conclu");
+        conclu.value = randomItem;
     }
 </script>
 
@@ -42,16 +44,24 @@
             color: #333333;
         }
         body {
+            position: relative;
             margin: 0;
+            padding: 0;
+            width: 100vw;
+            height: 100vh;
         }
         #main {
             border: 2px solid #333333;
             margin: 6px;
             padding: 6px;
             background: #f8f8f8;
+            /* margin-top: 10vh; */
+            padding-top: 30vh;
+            padding-bottom: 30vh;
+            top: 50%;
         }
         #title {
-            font-size: 5rem;
+            font-size: 4rem;
             line-height: 10rem;
             text-align: center;
         }
@@ -60,22 +70,17 @@
             margin-top: 6px;
             font-size: 0px;
         }
-        #maintitle span {
-            font-size: 2rem;
-            vertical-align: baseline;
-            margin-left: 6px;
-        }
         #maintitle input {
             border: none;
             border-bottom: #666666 2px solid;
-            padding: 1px 0 0 0;
+            padding: 10px 0 0 0;
             line-height: 10rem;
-            vertical-align: baseline;
-            font-size: 4rem;
+            margin: 0px 6px 0 6px;
+            font-size: 4.5rem;
             background: #f8f8f8;
             color: #333333;
             text-align: center;
-            min-width: 20%;
+            width: 70%;
         }
         #maintitle button {
             border: 0;
@@ -112,15 +117,9 @@
             margin-top: 20px;
             font-size: 0px;
         }
-        #maintitle span {
-            font-size: 1rem;
-            vertical-align: baseline;
-            margin-left: 20px;
-        }
         #maintitle input {
             border: none;
             border-bottom: #666666 2px solid;
-            padding: 1px 0 0 0;
             margin: 0px 20px 0 20px;
             vertical-align: baseline;
             font-size: 1rem;
