@@ -1,6 +1,6 @@
 # 选择困难症福音
 
-你是不是也像我一样每天都会为决定晚上吃什么而感到困扰？为了不浪费每天饭点的宝贵时间给这个问题提供一个高效的解决方法，我编写了一个python程序来帮我们做选择。eat.py是主程序，eat.exe是它的可执行文件，其窗体由Tkinter生成；
+你是不是也像我一样每天都会为决定晚上吃什么而感到困扰？为了不浪费每天饭点的宝贵时间给这个问题提供一个高效的解决方法，我编写了一个python程序来帮我们做选择。eat.py是主程序，eat.exe是它的可执行文件，其窗体由Tkinter生成。此外，为了方便移动端以及跨平台使用，在eat.html中提供了这个小工具的网页版；
 
 ![1](https://github.com/DesWudio/Dyschooia-Helper/blob/main/readme/img0.png)
 
@@ -16,7 +16,7 @@ Have difficulty in choosing what‘s for dinner? Don't hesitate too much, this p
 
 ![3](https://github.com/DesWudio/Dyschooia-Helper/blob/main/readme/img0.png)
 
-In eat.py, the optional range can be customized by modifying the contents of the list Arr. In addition, the form of eat.py is implemented by tkinter, make sure you have this lib.
+In eat.py, the optional range can be customized by modifying the contents of the list Arr. In addition, the form of eat.py is implemented by tkinter, make sure you have this lib. Besides, a web version of this widget is accessible in eat.html for cross-platform using.
 
 ![4](https://github.com/DesWudio/Dyschooia-Helper/blob/main/readme/img1.png)
 
