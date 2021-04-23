@@ -38,7 +38,8 @@ for x,y in enumerate(sum): # 绘制横坐标
 plt.show()
 
 # 计算结果与理论概率的差值
-pcs = np.array([0.,0.,0.,0.,0.,0.,0.,0.,0.])
+pcs = np.zeros(len(set(Arr)), dtype = np.float64)
+
 for a in range(len(sum)):
 	pcs[a] = sum[a]/times - 1/len(Arr)
 print(pcs)
@@ -49,11 +50,11 @@ plt.title('差异值')
 plt.show()
 
 
-# 输出结果
+# print结果
 # for i  in range(len(set(Arr))):
 	# print(str(Arr[i] + " = " + str(sum[i]/(Arr.count(Arr[i])))))
 
-
+# 笨办法print结果
 # print("麻辣烫 = {}\n麻辣拌 = {}\n鸡公煲 = {}\n渤海饭店 = {}\n打卤面 \
 # 		= {}\n辣子鸡 = {}\n羊汤 = {}\\n二小饭店 = {}\n食堂(1/4) = {}\
 # 		".format(sum[0],sum[1],sum[2],sum[3],sum[4],sum[5],sum[6],\
